@@ -58,87 +58,31 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.6f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\SceneDisk.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\GroomContainer\ClumpGroomModifier.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\ColliderHelper.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\MergeSort\BitonicMergeSort.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\GroomContainer\GroomContainer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\HairRenderer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\ShaderID.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\AddStrandsCoroutine.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurMeshCreator.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\DuplicateCleaner.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\Extensions.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurContainer\UndoRecorder.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurContainer\ClumpModifierLayer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\PerProjectPreferences.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\GroomContainer\GroomLayer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurContainer\FurContainer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\MergeSort\MergeSortShaderUtil.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\HairContainer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\DefaultMaterialLoader.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\CullAndSortController.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurContainer\HairStrandLayer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\Examples\Common\Scripts\SimpleThirdPersonController.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\ErrorLogger.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\VerletSimulation.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\CSThread.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\StrandGroomStruct.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\StrandGroom.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurCreator.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\SDFCollider.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\GroomContainer\PainterProperties.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\CardMeshProperties.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\AlembicSetupHelper.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurContainer\HairStrand.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\SDFColliderCommon.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\Examples\Common\Scripts\SimpleCharacterAssetsInputs.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FluffyRenderersController.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\MeshBaker.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\AddClumpsCoroutine.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurRenderer.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\FurRendererSettings.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\PointsOnMeshJob.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\PainterUtils.cs" />
-    <Compile Include="Assets\FluffyGroomingTool\FurPainter\Runtime\Barycentric.cs" />
+    <Compile Include="Assets\Abdullah\Script\Ability_Schizo.cs" />
+    <Compile Include="Assets\Abdullah\Script\Ability_Dis.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\MeshBaker.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\ProceduralIncludeBIRP.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\HDRP\ShaderPassMotionVectors.hlsl" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\NormalHelperInclude.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\MarshnerLightingInclude.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\ProceduralFurSetup.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\FurInclude.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\HDRP\MotionVectorVertexShaderCommon.hlsl" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\ColorFade.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\BuiltInMotionVectors.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\WindContribution.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\FurMotionInclude.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\BitonicSort.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\VerletSimulation.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\NormalHelperInclude.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\CommonConstants.cginc" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\SDFColliderInclude.hlsl" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\HairRenderer.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\BIRPFurCards.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Spinner.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\SDFColliderCompute.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BrushCircleShader.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\CullingComputeShader.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\BIRPFurCardsTransparent.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\VerletSimulationInclude.hlsl" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\Node2.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\ImportantButton.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\SpinnerCircle.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\RippleButton.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\HDRP\HDRPMotionVectors.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\HairRendererInclude.hlsl" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\BuiltInRenderer\BIRPFurStrands.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\Thread.hlsl" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\MeshBakerFull.compute" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\StartScreenWelcomeImage.shader" />
-    <None Include="Assets\FluffyGroomingTool\Shaders\Resources\AlembicSkinning.compute" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -771,9 +715,6 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
@@ -890,9 +831,6 @@
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
