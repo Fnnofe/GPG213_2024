@@ -21,8 +21,15 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private bool canDash = true;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+    }
     private void Update()
     {
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
