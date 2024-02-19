@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\fifas\\GPG213_Black-Peguses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC1C8F4C-E3D9-CF1E-07F2-F4E113D1459D}|Assembly-CSharp.csproj|c:\\users\\fifas\\gpg213_black-peguses\\assets\\lakshya\\player movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC1C8F4C-E3D9-CF1E-07F2-F4E113D1459D}|Assembly-CSharp.csproj|solutionrelative:assets\\lakshya\\player movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC1C8F4C-E3D9-CF1E-07F2-F4E113D1459D}|Assembly-CSharp.csproj|C:\\Users\\fifas\\GPG213_Black-Peguses\\assets\\lakshya\\mele player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC1C8F4C-E3D9-CF1E-07F2-F4E113D1459D}|Assembly-CSharp.csproj|solutionrelative:assets\\lakshya\\mele player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC1C8F4C-E3D9-CF1E-07F2-F4E113D1459D}|Assembly-CSharp.csproj|c:\\users\\fifas\\gpg213_black-peguses\\assets\\lakshya\\wepon colission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC1C8F4C-E3D9-CF1E-07F2-F4E113D1459D}|Assembly-CSharp.csproj|solutionrelative:assets\\lakshya\\wepon colission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player Movement.cs",
-              "DocumentMoniker": "C:\\Users\\fifas\\GPG213_Black-Peguses\\Assets\\Lakshya\\Player Movement.cs",
-              "RelativeDocumentMoniker": "Assets\\Lakshya\\Player Movement.cs",
-              "ToolTip": "C:\\Users\\fifas\\GPG213_Black-Peguses\\Assets\\Lakshya\\Player Movement.cs",
-              "RelativeToolTip": "Assets\\Lakshya\\Player Movement.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAiwC8AAAAfAAAA",
+              "DocumentIndex": 1,
+              "Title": "wepon Colission.cs",
+              "DocumentMoniker": "C:\\Users\\fifas\\GPG213_Black-Peguses\\Assets\\Lakshya\\wepon Colission.cs",
+              "RelativeDocumentMoniker": "Assets\\Lakshya\\wepon Colission.cs",
+              "ToolTip": "C:\\Users\\fifas\\GPG213_Black-Peguses\\Assets\\Lakshya\\wepon Colission.cs",
+              "RelativeToolTip": "Assets\\Lakshya\\wepon Colission.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T14:40:20.021Z",
+              "WhenOpened": "2024-02-19T07:31:05.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mele player.cs",
+              "DocumentMoniker": "C:\\Users\\fifas\\GPG213_Black-Peguses\\Assets\\Lakshya\\mele player.cs",
+              "RelativeDocumentMoniker": "Assets\\Lakshya\\mele player.cs",
+              "ToolTip": "C:\\Users\\fifas\\GPG213_Black-Peguses\\Assets\\Lakshya\\mele player.cs",
+              "RelativeToolTip": "Assets\\Lakshya\\mele player.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T07:14:17.19Z",
               "EditorCaption": ""
             }
           ]
