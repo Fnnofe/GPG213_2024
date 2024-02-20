@@ -15,7 +15,7 @@ public class Ability_Schizo : MonoBehaviour
     float enemyTimer;
     public GameObject witchEnemy,player;
     public float spawnEnemyInterval;
-    
+    public KeyCode myKey;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class Ability_Schizo : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(myKey))
         {
             animator.SetTrigger("Switch");
         }
