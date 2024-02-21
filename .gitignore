@@ -1,7 +1,9 @@
 ﻿Library
 UserSettings
 Temp
+Logs
+Logs
 .vs
 Logs
-obj
-Logs
+obj/Debug
+.vs

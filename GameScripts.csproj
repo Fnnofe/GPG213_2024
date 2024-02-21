@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Abdullah\Script\Ability_Schizo.cs" />
+    <Compile Include="Assets\Abdullah\Script\RespawnTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Abdullah\Script\Game Scripts.asmdef" />
