@@ -59,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Abdullah\Script\Ability_Schizo.cs" />
+    <Compile Include="Assets\Abdullah\Script\Observer\Listner.cs" />
     <Compile Include="Assets\Abdullah\Script\RespawnTarget.cs" />
+    <Compile Include="Assets\Abdullah\Script\Observer\GameEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Abdullah\Script\Game Scripts.asmdef" />
