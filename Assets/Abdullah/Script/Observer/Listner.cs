@@ -21,7 +21,6 @@ public class Listner : MonoBehaviour
     public void EventRaised()
     {
         Response.Invoke();
-
     }
 
 
