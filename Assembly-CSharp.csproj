@@ -61,6 +61,8 @@
     <Compile Include="Assets\Lakshya\wepon Colission.cs" />
     <Compile Include="Assets\Lakshya\Player Movement.cs" />
     <Compile Include="Assets\Lakshya\mele player.cs" />
+    <Compile Include="Assets\Lakshya\PlayerHealth.cs" />
+    <Compile Include="Assets\Lakshya\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
