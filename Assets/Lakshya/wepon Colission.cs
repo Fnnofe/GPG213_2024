@@ -12,6 +12,7 @@ public class weponColission : MonoBehaviour
         {
             Debug.Log(other.name);
             other.GetComponent<Animator>().SetTrigger("Hit");
+            GameObject.Destroy(other.gameObject);
 
         }
     }
