@@ -4,5 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Jamal Scenes/Jamal - Testing Grounds.unity
+    guid: 4306e42887a67af4598ffc8d9b867b89
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3d6f00680811c30488e0103a144914ce, type: 2}
