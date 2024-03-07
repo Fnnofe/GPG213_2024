@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lakshya Scenes/HubScene.unity
+    guid: fa4741c5eae25684098e8e4193383e59
+  - enabled: 1
+    path: Assets/Scenes/Lakshya Scenes/new level.unity
+    guid: 14cb0d7209bd97b429bf7caffd95879c
+  - enabled: 1
+    path: Assets/Scenes/Jamal Scenes/Jamal - Level.unity
+    guid: 2e7f54e79e34b9b439b498f1df7110e2
   m_configObjects: {}
