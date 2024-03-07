@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3865.0278, g: 4812.1763, b: 4424.719, a: 1}
+  m_IndirectSpecularColor: {r: 3863.9966, g: 4808.9497, b: 4428.0825, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -405,7 +405,6 @@ Transform:
   - {fileID: 2036781326}
   - {fileID: 535798941}
   - {fileID: 618216113}
-  - {fileID: 1594697002}
   - {fileID: 1297220047}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 59720127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.87, y: 4.664, z: -6.67}
+  m_LocalPosition: {x: 5.32, y: 5.4300003, z: -5.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -720,8 +719,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68345090}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09615061, y: -0.000000039475005, z: 0.0000000038132124, w: 0.9953669}
-  m_LocalPosition: {x: 4.87, y: 4.664, z: -6.67}
+  m_LocalRotation: {x: 0.09615062, y: -0.000000035307515, z: 0.0000000034106415, w: 0.9953669}
+  m_LocalPosition: {x: 5.32, y: 5.4300003, z: -5.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5484,7 +5483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480603109}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13224377, y: 0.000000017055264, z: -0.000000002275437, w: 0.99121726}
+  m_LocalRotation: {x: 0.13224377, y: -0.000000017055264, z: 0.0000000022754372, w: 0.99121726}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6204,7 +6203,7 @@ Transform:
   m_GameObject: {fileID: 587941181}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.87, y: 1.404, z: 5.33}
+  m_LocalPosition: {x: 5.32, y: 2.17, z: 6.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8725,6 +8724,7 @@ Transform:
   - {fileID: 1764405050}
   - {fileID: 958686104}
   - {fileID: 331752372}
+  - {fileID: 1594697002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &868868615
@@ -18045,7 +18045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204281000}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.096150585, y: -0.000000021408322, z: 0.0000000020680042, w: 0.9953668}
+  m_LocalRotation: {x: 0.0961506, y: -0.000000017653754, z: 0.0000000017053201, w: 0.9953668}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18750,6 +18750,7 @@ GameObject:
   - component: {fileID: 1297220050}
   - component: {fileID: 1297220049}
   - component: {fileID: 1297220048}
+  - component: {fileID: 1297220051}
   m_Layer: 0
   m_Name: Portal to the hub (Portal effect, when player collide enters the Hub area)
   m_TagString: Untagged
@@ -18843,6 +18844,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297220046}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1297220051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297220046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccd6dd22fde8ef479b8ba3bb790fad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  SceneName: HubScene
 --- !u!1 &1335583658
 GameObject:
   m_ObjectHideFlags: 0
@@ -23237,11 +23252,11 @@ Transform:
   m_GameObject: {fileID: 1594697001}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.37155122, z: -0, w: 0.92841256}
-  m_LocalPosition: {x: -27.58, y: 0, z: -47.28}
-  m_LocalScale: {x: 24.638401, y: 20, z: 1}
+  m_LocalPosition: {x: -5.754944, y: 12.499999, z: -11.592651}
+  m_LocalScale: {x: 24.638405, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 50358181}
+  m_Father: {fileID: 851933403}
   m_LocalEulerAnglesHint: {x: 0, y: 43.623, z: 0}
 --- !u!65 &1594697003
 BoxCollider:
@@ -24896,7 +24911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690511305}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.114192165, y: -0.000000004273457, z: 4.912086e-10, w: 0.9934587}
+  m_LocalRotation: {x: 0.11419217, y: 1e-45, z: -0, w: 0.9934587}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
