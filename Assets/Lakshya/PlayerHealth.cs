@@ -18,12 +18,12 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(2);
+            PlayerTakeDamage(2);
             Debug.Log("ouch");
         }
     }
 
-    void TakeDamage(int damage)
+    void PlayerTakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
