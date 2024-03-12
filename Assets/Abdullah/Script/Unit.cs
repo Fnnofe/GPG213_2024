@@ -6,11 +6,22 @@ public class Unit : MonoBehaviour
 {
     public Transform target;
     public float speed = 0.2f;
+    
     Vector3[] path;
     int targetIndex;
+    float time = 0;
+
+    private void Start()
+    {
+        target = GameObject.Find("Player").transform;
+    }
     private void Update()
     {
-       if( Input.GetKeyDown(KeyCode.Space)){
+        time= time + 1*Time.deltaTime;
+        if (time >= .5f){
+            Debug.Log("time" + time);
+            time = 0;
+            targetIndex = 0;
             PathRequestManger.RequestPath(transform.position, target.position, OnPathFound);
         }
     }
@@ -18,8 +29,9 @@ public class Unit : MonoBehaviour
     {
         if (pathSuccessful)
         {
-            path = newPath;
             StopCoroutine("FollowPath");
+
+             path = newPath;
             StartCoroutine("FollowPath");
         }
     }
@@ -34,11 +46,13 @@ public class Unit : MonoBehaviour
                 targetIndex++;
                 if (targetIndex >= path.Length)
                 {
+                    targetIndex = 0;
                     yield break;
                 }
                 currentWayPoint = path[targetIndex];
             }
             transform.position = Vector3.MoveTowards(transform.position, currentWayPoint, speed * Time.deltaTime);
+
             yield return null;
         }
     }
@@ -62,5 +76,6 @@ public class Unit : MonoBehaviour
                         }
             }
         }
+
     }
 }

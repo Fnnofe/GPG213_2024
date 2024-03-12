@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Jamal Scenes/Jamal - Testing Grounds.unity
+    path: Assets/Scenes/Jamal Scenes/Jamal - Tutorial.unity
     guid: 4306e42887a67af4598ffc8d9b867b89
   - enabled: 1
     path: Assets/Scenes/Lakshya Scenes/HubScene.unity
