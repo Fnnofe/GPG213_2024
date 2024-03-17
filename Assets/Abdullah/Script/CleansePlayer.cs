@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CleansePlayer : MonoBehaviour
@@ -8,7 +6,7 @@ public class CleansePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerToCleanse=FindAnyObjectByType<Ability_Schizo>();
+        playerToCleanse = FindAnyObjectByType<Ability_Schizo>();
 
 
     }

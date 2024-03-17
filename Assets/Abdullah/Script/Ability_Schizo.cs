@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using TMPro;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,22 +12,23 @@ public class Ability_Schizo : MonoBehaviour
     float enemyTimer;
 
 
-    public float EnemyTimer {
+    public float EnemyTimer
+    {
         set
         {
             timer = value;
             enemyTimer = value;
         }
     }
-  
 
-    public GameObject witchEnemy,player;
+
+    public GameObject witchEnemy, player;
     public float spawnEnemyInterval;
     public KeyCode myKey;
 
     void Start()
     {
-        animator=GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
     }
     void Update()
@@ -47,12 +43,12 @@ public class Ability_Schizo : MonoBehaviour
         //%100
         if (timer == MaxDuration)
         {
-       //     Debug.Log("spawningEnemy +  100%");
+            //     Debug.Log("spawningEnemy +  100%");
 
             enemyTimer += 1 * Time.deltaTime;
             if (enemyTimer >= spawnEnemyInterval)
             {
-            //    Debug.Log("enemyTimer +  100%");
+                //    Debug.Log("enemyTimer +  100%");
 
                 playerPos = new Vector3(playerPos.x + Random.Range(-4f, 4f) * 2, playerPos.y, playerPos.z + Random.Range(-4f, 4f) * 2);
 
@@ -64,11 +60,11 @@ public class Ability_Schizo : MonoBehaviour
         //%50
         else if (timer > MaxDuration / 2)
         {
-     //       Debug.Log("spawningEnemy +  50%");
+            //       Debug.Log("spawningEnemy +  50%");
             enemyTimer += 1 * Time.deltaTime;
-            if (enemyTimer >= spawnEnemyInterval+2)
+            if (enemyTimer >= spawnEnemyInterval + 2)
             {
- //               Debug.Log("enemyTimer +  50%");
+                //               Debug.Log("enemyTimer +  50%");
 
                 playerPos = new Vector3(playerPos.x + Random.Range(-4f, 4f) * 2, playerPos.y, playerPos.z + Random.Range(-4f, 4f) * 2);
 
@@ -81,13 +77,13 @@ public class Ability_Schizo : MonoBehaviour
         //%33
         else if (timer > MaxDuration / 3)
         {
-         //   Debug.Log("spawningEnemy +  33%");
+            //   Debug.Log("spawningEnemy +  33%");
 
             enemyTimer += 1 * Time.deltaTime;
             if (enemyTimer >= spawnEnemyInterval + 3)
             {
 
-          //      Debug.Log("enemyTimer +  33%");
+                //      Debug.Log("enemyTimer +  33%");
                 playerPos = new Vector3(playerPos.x + Random.Range(-4f, 4f) * 2, playerPos.y, playerPos.z + Random.Range(-4f, 4f) * 2);
 
                 Instantiate(witchEnemy, playerPos, Quaternion.identity);
@@ -111,20 +107,20 @@ public class Ability_Schizo : MonoBehaviour
                 timer = MaxDuration;
 
             }
-            slider.value = timer/ MaxDuration;
-        }
-       /* //deactavate ability
-        if (timer >0 && propsShift.activeSelf == false)
-        {
-            timer -=  1 * Time.deltaTime;
-            if (timer < 0)
-            {
-                timer = 0;
-            }
             slider.value = timer / MaxDuration;
-
         }
-       */
+        /* //deactavate ability
+         if (timer >0 && propsShift.activeSelf == false)
+         {
+             timer -=  1 * Time.deltaTime;
+             if (timer < 0)
+             {
+                 timer = 0;
+             }
+             slider.value = timer / MaxDuration;
+
+         }
+        */
 
         animator.SetFloat("Timer", timer / MaxDuration);
 
