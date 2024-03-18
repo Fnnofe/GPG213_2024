@@ -1,12 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
     public Transform target;
     public float speed = 0.2f;
-    
+
     Vector3[] path;
     int targetIndex;
     float time = 0;
@@ -17,8 +16,9 @@ public class Unit : MonoBehaviour
     }
     private void Update()
     {
-        time= time + 1*Time.deltaTime;
-        if (time >= .5f){
+        time = time + 1 * Time.deltaTime;
+        if (time >= .5f)
+        {
             Debug.Log("time" + time);
             time = 0;
             targetIndex = 0;
@@ -31,7 +31,7 @@ public class Unit : MonoBehaviour
         {
             StopCoroutine("FollowPath");
 
-             path = newPath;
+            path = newPath;
             StartCoroutine("FollowPath");
         }
     }
@@ -59,9 +59,9 @@ public class Unit : MonoBehaviour
 
     public void OnDrawGizmos()
     {
-        if(path != null)
+        if (path != null)
         {
-            for ( int i = targetIndex;i<path.Length; i++)
+            for (int i = targetIndex; i < path.Length; i++)
             {
                 Gizmos.color = Color.green;
                 Gizmos.DrawCube(path[i], Vector3.one);
@@ -71,9 +71,10 @@ public class Unit : MonoBehaviour
 
                     Gizmos.DrawLine(transform.position, path[i]);
                 }
-                else {
+                else
+                {
                     Gizmos.DrawLine(path[i - 1], path[i]);
-                        }
+                }
             }
         }
 

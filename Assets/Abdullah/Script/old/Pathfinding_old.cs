@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
 using System.Diagnostics;
+using UnityEngine;
 
 public class Pathfinding_old : MonoBehaviour
 {
@@ -11,15 +9,16 @@ public class Pathfinding_old : MonoBehaviour
 
     private void Awake()
     {
-        grid=GetComponent<GridMap>();
+        grid = GetComponent<GridMap>();
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0)){
-        FindPath(enemy.position, targetPlayer.position);
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            FindPath(enemy.position, targetPlayer.position);
         }
     }
-    void FindPath(Vector3 startPos,Vector3 targetPos)
+    void FindPath(Vector3 startPos, Vector3 targetPos)
     {
         Stopwatch sw = new Stopwatch();
         sw.Start();
@@ -34,12 +33,12 @@ public class Pathfinding_old : MonoBehaviour
         {
             Node currentNode = openSet[0];
             //pick the lowest fCost node to check or equal to the curretn node.
-            for (int i=1; i < openSet.Count; i++)
+            for (int i = 1; i < openSet.Count; i++)
             {
-                if (openSet[i].fCost < currentNode.fCost|| openSet[i].fCost==currentNode.fCost && openSet[i].hCost<currentNode.hCost)
+                if (openSet[i].fCost < currentNode.fCost || openSet[i].fCost == currentNode.fCost && openSet[i].hCost < currentNode.hCost)
                 {
                     currentNode = openSet[i];
-                    
+
                 }
 
             }
@@ -51,9 +50,9 @@ public class Pathfinding_old : MonoBehaviour
             if (currentNode == targetNode)
             {
                 sw.Stop();
-                UnityEngine.Debug.Log("reached end"+sw.ElapsedMilliseconds+"ms");
+                UnityEngine.Debug.Log("reached end" + sw.ElapsedMilliseconds + "ms");
 
-                RetracePath(startNode,targetNode);
+                RetracePath(startNode, targetNode);
                 return;
             }
             foreach (Node neighbour in grid.GetNeighbours(currentNode))
@@ -63,14 +62,15 @@ public class Pathfinding_old : MonoBehaviour
 
                 //calculate 
                 int newMovementCostToNeighbour = currentNode.gCost + getDistance(currentNode, neighbour);
-                if(newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
+                if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
                 {
 
                     neighbour.gCost = newMovementCostToNeighbour;
-                    neighbour.hCost = getDistance(neighbour,targetNode);
+                    neighbour.hCost = getDistance(neighbour, targetNode);
                     neighbour.parent = currentNode;
 
-                    if (!openSet.Contains(neighbour)) {
+                    if (!openSet.Contains(neighbour))
+                    {
                         openSet.Add(neighbour);
                     }
 
@@ -86,25 +86,25 @@ public class Pathfinding_old : MonoBehaviour
     {
         List<Node> path = new List<Node>();
         Node currentNode = endNode;
-        while (currentNode != startNode) 
+        while (currentNode != startNode)
         {
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
         path.Reverse();
-       // grid.path = path;
+        // grid.path = path;
 
     }
 
     //
     int getDistance(Node nodeA, Node nodeB)
     {
-        int distanceX=Mathf.Abs(nodeA.gridX - nodeB.gridX);
+        int distanceX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
         int distanceY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
 
         if (distanceX > distanceY) return 14 * distanceY + 10 * (distanceX - distanceY);
 
-         return 14 * distanceX + 10 * (distanceY - distanceX);
+        return 14 * distanceX + 10 * (distanceY - distanceX);
     }
 
 
