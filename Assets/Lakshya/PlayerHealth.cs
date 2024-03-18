@@ -16,9 +16,8 @@ public class PlayerHealth : MonoBehaviour
     Vignette vignette;
 
     // Parameters for vignette effect
-    public float damageVignetteIntensity = 0.5f; // Intensity of vignette when player takes damage
-    public float vignetteFadeDuration = 1.0f;    // Duration of vignette fade effect
-
+    public float damageVignetteIntensity = 0.5f; 
+    public float vignetteFadeDuration = 1.0f;    
     void Start()
     {
         currentHealth = maxHealth;

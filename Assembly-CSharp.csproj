@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Lakshya\Portal_Hub.cs" />
+    <Compile Include="Assets\Lakshya\TestSeekersVeil.cs" />
     <Compile Include="Assets\Lakshya\wepon Colission.cs" />
     <Compile Include="Assets\Lakshya\EnemyHealth.cs" />
     <Compile Include="Assets\Lakshya\Player Movement.cs" />
