@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7290fc45df86c004d91b649845537510, type: 3}
-  m_Name: health down
+  m_Name: Ability_S_Activated
   m_EditorClassIdentifier: 

@@ -412,7 +412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84129097}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13224377, y: 0.00000001705526, z: -0.0000000022754367, w: 0.99121726}
+  m_LocalRotation: {x: 0.13224377, y: -0.000000017055264, z: 0.0000000022754372, w: 0.99121726}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indvisualResponse: 1
-  Event: {fileID: 11400000, guid: cf81d3be96d65434e8fa3e95c451cfe0, type: 2}
+  Event: {fileID: 11400000, guid: 885a5e9134d276e4c931264e558008ff, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -1287,7 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerIndividually: {fileID: 0}
-  GameEvent: {fileID: 11400000, guid: cf81d3be96d65434e8fa3e95c451cfe0, type: 2}
+  GameEvent: {fileID: 11400000, guid: 885a5e9134d276e4c931264e558008ff, type: 2}
 --- !u!114 &376586696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17099,7 +17099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indvisualResponse: 1
-  Event: {fileID: 11400000, guid: cf81d3be96d65434e8fa3e95c451cfe0, type: 2}
+  Event: {fileID: 11400000, guid: 885a5e9134d276e4c931264e558008ff, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -17296,6 +17296,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5865341545633128234, guid: 4e690f4b3c7a88a4f9a0d85551160f88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745465758680926489, guid: 4e690f4b3c7a88a4f9a0d85551160f88, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8975239877858138192, guid: 4e690f4b3c7a88a4f9a0d85551160f88, type: 3}
