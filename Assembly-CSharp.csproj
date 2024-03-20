@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Lakshya\Portal_Hub.cs" />
+    <Compile Include="Assets\Lakshya\TestSeekersVeil.cs" />
     <Compile Include="Assets\Lakshya\wepon Colission.cs" />
     <Compile Include="Assets\Lakshya\EnemyHealth.cs" />
     <Compile Include="Assets\Lakshya\Player Movement.cs" />
@@ -870,9 +871,21 @@
       <Project>{B0CC0B8B-2609-908B-6405-36A8BFACD973}</Project>
       <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Boids.csproj">
+      <Project>{4F79273A-4AB5-14A8-7929-03E58016AEE7}</Project>
+      <Name>Boids</Name>
+    </ProjectReference>
     <ProjectReference Include="GameScripts.csproj">
       <Project>{A24C514E-2EC1-2771-36D3-57568FF705BA}</Project>
       <Name>GameScripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="State Machine.csproj">
+      <Project>{2A3F1033-0985-BE32-A5D2-BBF42868267E}</Project>
+      <Name>State Machine</Name>
+    </ProjectReference>
+    <ProjectReference Include="BehaviourTree.csproj">
+      <Project>{06EC2C43-7AFC-A1CD-5A62-5C5508F82421}</Project>
+      <Name>BehaviourTree</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
