@@ -1,8 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEngine;
 
 
 // What does that mean exactly ?
@@ -36,11 +32,11 @@ public class Heap<T> where T : IHeapItem<T>
         items[0].HeapIndex = 0;
         SortDown(items[0]);
 
-            return firstItem;
+        return firstItem;
     }
 
     //in case we wants to change a pirority of an item.like with the Fcost
-public void UpdateItem(T item)
+    public void UpdateItem(T item)
     {
         SortUp(item);
 
@@ -54,7 +50,7 @@ public void UpdateItem(T item)
     public bool Contains(T item)
     {
 
-        return Equals(items[item.HeapIndex],item);
+        return Equals(items[item.HeapIndex], item);
     }
     void SortDown(T item)
     {
@@ -70,12 +66,14 @@ public void UpdateItem(T item)
 
                 if (ChildIndexRight < currentItemCount)
                 {
-                    if (items[ChildIndexLeft].CompareTo(items[ChildIndexRight]) < 0){
+                    if (items[ChildIndexLeft].CompareTo(items[ChildIndexRight]) < 0)
+                    {
                         swapIndex = ChildIndexRight;
                     }
 
                 }
-                if (item.CompareTo(items[swapIndex]) < 0){
+                if (item.CompareTo(items[swapIndex]) < 0)
+                {
                     Swap(item, items[swapIndex]);
 
                 }
@@ -93,7 +91,7 @@ public void UpdateItem(T item)
     }
     void SortUp(T item)
     {
-        int parentIndex = (item.HeapIndex - 1)/2;
+        int parentIndex = (item.HeapIndex - 1) / 2;
         while (true)
         {
             T parentItem = items[parentIndex];
@@ -109,14 +107,14 @@ public void UpdateItem(T item)
             parentIndex = (item.HeapIndex - 1) / 2;
         }
     }
-    
-    void Swap(T itemA,T itemB)
+
+    void Swap(T itemA, T itemB)
     {
-        items[itemA.HeapIndex]=itemB;
-        items[itemB.HeapIndex]=itemA;
+        items[itemA.HeapIndex] = itemB;
+        items[itemB.HeapIndex] = itemA;
         int itemAIndex = itemA.HeapIndex;
-        itemA.HeapIndex=itemB.HeapIndex;
-        itemB.HeapIndex= itemAIndex;
+        itemA.HeapIndex = itemB.HeapIndex;
+        itemB.HeapIndex = itemAIndex;
 
 
 
@@ -129,7 +127,8 @@ public void UpdateItem(T item)
 
 public interface IHeapItem<T> : IComparable<T>
 {
-    int HeapIndex { 
+    int HeapIndex
+    {
         get;
         set;
     }

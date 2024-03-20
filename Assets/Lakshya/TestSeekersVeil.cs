@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
 
-public class Ability_Schizo : MonoBehaviour
+public class TestSeekersVeil : MonoBehaviour
 {
     public GameObject OriginalObjects;
     public GameObject propsShift;

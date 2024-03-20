@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B0CC0B8B-2609-908B-6405-36A8BFACD973}</ProjectGuid>
+    <ProjectGuid>{4F79273A-4AB5-14A8-7929-03E58016AEE7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.RenderPipelines.HighDefinition.Config.Runtime</AssemblyName>
+    <AssemblyName>Boids</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -58,11 +58,12 @@
     <Analyzer Include="D:\2022.3.6f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.render-pipelines.high-definition-config\Runtime\ShaderConfig.cs" />
+    <Compile Include="Assets\Abdullah\Script\Boids\Entity.cs" />
+    <Compile Include="Assets\Abdullah\Script\Boids\BoidsManager.cs" />
+    <Compile Include="Assets\Abdullah\Script\Boids\BoidsBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Packages\com.unity.render-pipelines.high-definition-config\Runtime\Unity.RenderPipelines.HighDefinition.Config.Runtime.asmdef" />
-    <None Include="Packages\com.unity.render-pipelines.high-definition-config\Runtime\ShaderConfig.cs.hlsl" />
+    <None Include="Assets\Abdullah\Script\Boids\Boids.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -712,9 +713,6 @@
     </Reference>
     <Reference Include="System.Xml.Serialization">
       <HintPath>D:\2022.3.6f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>

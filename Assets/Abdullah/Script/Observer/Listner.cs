@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Listner : MonoBehaviour
 {
-    public bool indvisualResponse=false;
+    public bool indvisualResponse = false;
     public GameEvent Event;
     public UnityEvent Response;
-    
+
     private void OnEnable()
     {
         Event.AddListener(this);
