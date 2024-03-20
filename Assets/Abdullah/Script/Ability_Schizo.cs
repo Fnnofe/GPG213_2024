@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Ability_Schizo : MonoBehaviour
 {
     public GameObject OriginalObjects;
@@ -10,7 +9,6 @@ public class Ability_Schizo : MonoBehaviour
     public Slider slider;
     float timer;
     float enemyTimer;
-
 
     public float EnemyTimer
     {
@@ -25,6 +23,7 @@ public class Ability_Schizo : MonoBehaviour
     public GameObject witchEnemy, player;
     public float spawnEnemyInterval;
     public KeyCode myKey;
+    
 
     void Start()
     {
