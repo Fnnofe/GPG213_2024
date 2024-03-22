@@ -14,6 +14,7 @@ public class Unit : MonoBehaviour
     {
         target = GameObject.Find("Player").transform;
     }
+    /*
     private void Update()
     {
         time = time + 1 * Time.deltaTime;
@@ -25,7 +26,21 @@ public class Unit : MonoBehaviour
             PathRequestManger.RequestPath(transform.position, target.position, OnPathFound);
         }
     }
+    */
+    public void FindPath()
+    {
+        time = time + 1 * Time.deltaTime;
+        if (time >= .5f)
+        {
+            Debug.Log("time" + time);
+            time = 0;
+            targetIndex = 0;
+            PathRequestManger.RequestPath(transform.position, target.position, OnPathFound);
+        }
+  
+    }
     public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
+            
     {
         if (pathSuccessful)
         {
