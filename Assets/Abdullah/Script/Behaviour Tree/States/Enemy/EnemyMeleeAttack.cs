@@ -12,11 +12,12 @@ using BehaviorTree;
 
         public override NodeState Evaluate()
         {
+        Debug.Log("I'm in EnemyMeleeAttack");
 
-            
-                       
 
-            return NodeState.Sucess;
+
+
+        return NodeState.Sucess;
 
         }
     }

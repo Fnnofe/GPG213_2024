@@ -1,17 +1,15 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 using BehaviorTree;
-using static UnityEngine.UI.CanvasScaler;
 
-    public class ChaseLogic : TreeNode
-    {
-        public float distanceToPLayer;
-        private Transform _transform;
-        private Transform player;
-        private Animation _animation;
+public class ChaseLogic : TreeNode
+{
+    public float distanceToPLayer;
+    private Transform _transform;
+    private Transform player;
+    private Animation _animation;
     private Unit _unit;
     RaycastHit hit;
 
@@ -26,16 +24,17 @@ using static UnityEngine.UI.CanvasScaler;
 
     public override NodeState Evaluate()
         {
-        Physics.Raycast(_transform.position, player.position, out hit);
-        Debug.Log("-----RayCast HIT:" + hit.transform.name+ "-----");
 
-        if (hit.transform.name == player.name)
+        if ("help" == player.name)
         {
             _unit.FindPath();
             Debug.Log("I can see the Player");
             return NodeState.Sucess;
+
         }
-        return NodeState.Failure;
+        else Debug.Log("Player is Hidding");
+        return NodeState.Sucess;
+
         }
     
 
