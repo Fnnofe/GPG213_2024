@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DailogInfo : MonoBehaviour
+public class DialogInfo : MonoBehaviour
 {
     //
     [Header("Speaker info")]

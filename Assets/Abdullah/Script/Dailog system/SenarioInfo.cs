@@ -5,10 +5,10 @@ using UnityEngine;
 public class SenarioInfo : MonoBehaviour
 {
 
-    public DailogInfo[] orderOfAppearing;
+    public DialogInfo[] orderOfAppearing;
     private void Start()
     {
-        DailogManager manager=FindAnyObjectByType<DailogManager>();
+        DialogManager manager=FindAnyObjectByType<DialogManager>();
         manager.StartSenario( orderOfAppearing);
     }
 
