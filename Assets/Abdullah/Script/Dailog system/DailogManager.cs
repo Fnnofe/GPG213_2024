@@ -32,7 +32,6 @@ public class DailogManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.KeypadEnter)|| Input.GetKeyDown(KeyCode.Escape))
         {
              NextDailog();
-
         }
     }
     //starting a new conversation;
@@ -83,7 +82,7 @@ public class DailogManager : MonoBehaviour
     public void ButtonPrevious()
     {
         // we are at the first Daillog line(we are in the Dailog[0] text[0])
-        if (previousDailog.Peek() == null)
+        if (previousDailog.Peek() == null&& currentDailog.textOrderOfAppearing[0]== currentDailog.textOrderOfAppearing[dailogCount])
         {
             return;
         }
@@ -99,7 +98,7 @@ public class DailogManager : MonoBehaviour
             {
                 nextDailog.Push(currentDailog);
                 currentDailog = previousDailog.Pop();
-                dailogCount = currentDailog.textOrderOfAppearing.Length;
+                dailogCount = currentDailog.textOrderOfAppearing.Length-1;
                 AssignInfo();
 
             }
@@ -113,10 +112,19 @@ public class DailogManager : MonoBehaviour
         uIImage.sprite = currentDailog.speakerImage;
             //name
         nPCName.text = currentDailog.speakerName;
+        nPCName.color = currentDailog.speakerColor;
 
-            //text
-        nPCDailog.text = currentDailog.textOrderOfAppearing[dailogCount];
-        nPCDailog.color = currentDailog.speakerColor;
+
+        //text
+        if (dailogCount== currentDailog.textOrderOfAppearing.Length)
+        {
+            nPCDailog.text = currentDailog.textOrderOfAppearing[dailogCount-1];
+
+        }
+             else
+        {
+            nPCDailog.text = currentDailog.textOrderOfAppearing[dailogCount];
+        }
 
     }
 
