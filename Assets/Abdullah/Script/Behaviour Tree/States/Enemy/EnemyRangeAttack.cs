@@ -17,7 +17,7 @@ public class EnemyRangeAttack : TreeNode
 
 
 
-        return NodeState.Sucess;
+        return NodeState.Running;
 
     }
 }

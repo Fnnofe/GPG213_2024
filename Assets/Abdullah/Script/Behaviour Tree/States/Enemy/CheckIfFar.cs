@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 using BehaviorTree;
 
 public class CheckIfFar : TreeNode
 {
-    public float despawnDistance;
-    public float distancefromPLayer;
+    public float despawnDistance=55f;
+    public float distancefromPLayer=8.00f;
     Transform _transform;
     Transform player;
     public CheckIfFar(Transform transform)
@@ -19,25 +18,30 @@ public class CheckIfFar : TreeNode
     }
     public override NodeState Evaluate()
     {
-        Debug.Log(player.name + "I'm faaaaaaaaaaaar " + _transform.name);
         float currentDistanceFromTarget = Vector3.Distance(player.position, _transform.position);
         // if the player
-        if (currentDistanceFromTarget >= distancefromPLayer && currentDistanceFromTarget < despawnDistance)
+        if (distancefromPLayer <= currentDistanceFromTarget && despawnDistance >= currentDistanceFromTarget)
         {
 
             //Chase
+            Debug.Log("not too far");
+
             return NodeState.Sucess;
 
         }
-        else if (currentDistanceFromTarget >= despawnDistance){
+        else if (despawnDistance< currentDistanceFromTarget)
+        {
 
             //TooFar 
+            //despawn
+            Debug.Log("DespawnEnemy");
             return NodeState.Failure;
 
         }
 
+        Debug.Log("too close");
 
-        return NodeState.Sucess;
+        return NodeState.Failure;
 
 
     }

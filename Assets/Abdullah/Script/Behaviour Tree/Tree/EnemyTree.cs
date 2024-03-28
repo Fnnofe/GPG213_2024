@@ -27,8 +27,9 @@ public class EnemyTree : TreeRoot
             }),
             new Sequance(new List<TreeNode>
             {
-                new ChaseLogic(transform),
                 new CheckIfFar(transform),
+                new ChaseLogic(transform),
+                
 
 
             }),

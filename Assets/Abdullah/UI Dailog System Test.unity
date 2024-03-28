@@ -152,10 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb964b3ccc682bb4e9b6e70a53e5d7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dailogUI: {fileID: 1365413720}
+  dialogUI: {fileID: 1365413720}
   uIImage: {fileID: 717845403}
   nPCName: {fileID: 403382625}
-  nPCDailog: {fileID: 1314444241}
+  nPCDialog: {fileID: 1314444241}
 --- !u!4 &7566343
 Transform:
   m_ObjectHideFlags: 0
@@ -168,8 +168,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 874872032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71314640
@@ -969,7 +968,7 @@ Transform:
   - {fileID: 1913095960}
   - {fileID: 1183489044}
   - {fileID: 1635966740}
-  m_Father: {fileID: 7566343}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1087547042
 GameObject:
@@ -1139,8 +1138,6 @@ MonoBehaviour:
   speakerColor: {r: 0.16602883, g: 0.47721845, b: 0.8584906, a: 1}
   textOrderOfAppearing:
   - Test 04
-  - Test 05
-  - Test 06
 --- !u!4 &1183489044
 Transform:
   m_ObjectHideFlags: 0
@@ -1630,9 +1627,7 @@ MonoBehaviour:
   speakerName: Circle
   speakerColor: {r: 0.050418302, g: 0.9716981, b: 0.121837795, a: 1}
   textOrderOfAppearing:
-  - Test 07
-  - Test 08
-  - Test 09
+  - Test 05
 --- !u!4 &1635966740
 Transform:
   m_ObjectHideFlags: 0
@@ -1902,3 +1897,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 81699253}
   - {fileID: 7566343}
+  - {fileID: 874872032}

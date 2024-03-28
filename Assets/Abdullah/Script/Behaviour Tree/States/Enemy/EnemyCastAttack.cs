@@ -16,7 +16,7 @@ public class EnemyCastAttack : TreeNode
 
         Debug.Log("I'm in EnemyCastAttack");
 
-        return NodeState.Failure;
+        return NodeState.Running;
 
     }
 }
