@@ -6,7 +6,7 @@ public class SenarioInfo : MonoBehaviour
 {
 
     public DialogInfo[] orderOfAppearing;
-    private void Start()
+    public void StartSenario()
     {
         DialogManager manager=FindAnyObjectByType<DialogManager>();
         manager.StartSenario( orderOfAppearing);

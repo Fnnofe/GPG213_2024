@@ -14,8 +14,4 @@ public class DialogInfo : MonoBehaviour
     public string[] textOrderOfAppearing = new string[3];
 
     // Start is called before the first frame update
-
-
-
-
 }

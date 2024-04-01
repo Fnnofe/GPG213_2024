@@ -14,7 +14,7 @@ public class DialogManager : MonoBehaviour
 
     public TextMeshProUGUI nPCName;
     public TextMeshProUGUI nPCDialog;
-
+    GameObject player;
 
     int dialogCount =0;
 
@@ -24,9 +24,13 @@ public class DialogManager : MonoBehaviour
 
     //I need a stack here not Queue
     DialogInfo currentDialog;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.KeypadEnter)|| Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.Return)|| Input.GetKeyDown(KeyCode.Escape))
         {
              NextDialog();
         }
@@ -34,7 +38,11 @@ public class DialogManager : MonoBehaviour
     //starting a new conversation;
     public void StartSenario( DialogInfo[] Senario)
     {
+        player.GetComponent<PlayerMovement>().enabled = false;
         dialogUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
 
         nextDialog = new Stack<DialogInfo>(Senario.Length);
         previousDialog = new Stack<DialogInfo>(Senario.Length);
@@ -132,7 +140,10 @@ public class DialogManager : MonoBehaviour
     }
     public void EndDialog()
     {
+        player.GetComponent<PlayerMovement>().enabled = true;
         dialogUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
     }
 

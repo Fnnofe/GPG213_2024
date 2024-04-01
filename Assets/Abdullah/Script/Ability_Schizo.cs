@@ -53,7 +53,7 @@ public class Ability_Schizo : MonoBehaviour
 
         // Calculate vignette intensity based on ability timer
         float vignetteIntensity = timer / MaxDuration * vignetteIntensityMultiplier;
-        vignette.intensity.value = vignetteIntensity;
+       // vignette.intensity.value = vignetteIntensity;
 
         //%100
         if (timer == MaxDuration)
