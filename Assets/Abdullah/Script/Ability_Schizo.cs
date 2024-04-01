@@ -34,7 +34,14 @@ public class Ability_Schizo : MonoBehaviour
             vignette = tempVignette;
         }
     }
-
+    public float EnemyTimer
+    {
+        set
+        {
+            timer = value;
+            enemyTimer = value;
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(myKey))

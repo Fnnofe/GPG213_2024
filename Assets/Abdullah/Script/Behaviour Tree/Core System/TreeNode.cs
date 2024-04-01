@@ -20,7 +20,7 @@ namespace BehaviorTree
         private Dictionary<string,object> _dataContext= new Dictionary<string,object>();
 
 
-
+        //constructor overloading allow for different initialization scenarios.
         public TreeNode()
         {
             parent = null;

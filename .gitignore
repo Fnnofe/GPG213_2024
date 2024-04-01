@@ -7,3 +7,6 @@ Logs
 Logs
 obj/Debug
 .vs
+*.csproj
+*.sln
+Assembly-CSharp.csproj
