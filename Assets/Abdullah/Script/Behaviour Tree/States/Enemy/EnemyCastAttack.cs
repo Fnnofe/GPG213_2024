@@ -14,9 +14,9 @@ public class EnemyCastAttack : TreeNode
     {
 
 
+        Debug.Log("I'm in EnemyCastAttack");
 
-
-        return NodeState.Sucess;
+        return NodeState.Running;
 
     }
 }

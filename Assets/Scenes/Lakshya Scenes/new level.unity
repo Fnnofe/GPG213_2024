@@ -1226,6 +1226,9 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 10
   healthBar: {fileID: 1899202026}
+  postProcessingVolume: {fileID: 0}
+  damageVignetteIntensity: 0.5
+  vignetteFadeDuration: 1
 --- !u!136 &156622546
 CapsuleCollider:
   m_ObjectHideFlags: 0

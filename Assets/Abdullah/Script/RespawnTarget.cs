@@ -7,11 +7,9 @@ public class RespawnTarget : MonoBehaviour
     public int distanceFromGround;
     void LateUpdate()
     {
-
         if (gameObject.transform.position.y < distanceFromGround * -1)
         {
             Transform closetPosition = null;
-
             foreach (Transform t in respawningPosition)
             {
                 if (!t) continue;
@@ -26,13 +24,11 @@ public class RespawnTarget : MonoBehaviour
                     Debug.Log(" closetPosition" + t.name);
                     closetPosition = t;
                 }
-
             }
-
             transform.position = closetPosition.position;
-
-
-
         }
     }
+
+
+
 }
