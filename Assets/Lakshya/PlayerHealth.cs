@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int currentHealth;
-    public int maxHealth;
+    public FloatValue currentHealth;
+    public FloatValue maxHealth;
 
-    public HealthBar healthBar;
+    public Slider healthSlider;
+    public Slider easInHealthSlider;
+    float initialIntensity;
+
+    float percentage;
 
     // Reference to the post-processing volume in your scene
     public Volume postProcessingVolume;
@@ -20,38 +25,57 @@ public class PlayerHealth : MonoBehaviour
     public float vignetteFadeDuration = 1.0f;    
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+
+        percentage = 0.02f * maxHealth.value;
+        currentHealth.value = maxHealth.value;
+
+        easInHealthSlider.maxValue = maxHealth.value;
+        healthSlider.maxValue = maxHealth.value;
+        UpdateUI();
 
         // Initialize vignette effect
         if (postProcessingVolume.profile.TryGet(out Vignette tempVignette))
         {
             vignette = tempVignette;
         }
-    }
+        initialIntensity = vignette.intensity.value;
 
-    private void OnCollisionEnter(Collision collision)
+    }
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        easInHealthSlider.value = Mathf.Lerp(easInHealthSlider.value, currentHealth.value, 0.05f);
+        if (easInHealthSlider.value <= percentage)
         {
-            PlayerTakeDamage(2);
-            Debug.Log("ouch");
-
-            // Trigger vignette effect
-            StartCoroutine(TriggerVignetteEffect());
+            // player died
+            // player died
+            // player died
         }
+
     }
 
-    void PlayerTakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        // Trigger vignette effect
+        StartCoroutine(TriggerVignetteEffect());
+
+        currentHealth.value -= damage;
+        GetComponent<Animator>().SetTrigger("Hit");
+        UpdateUI();
+
     }
+    void UpdateUI()
+    {
+        //Health down than lerp health down.
+        if (currentHealth.value < 0)
+        {
+            currentHealth.value = 0;
+        }
+        healthSlider.value = currentHealth.value;
+    }
+
 
     IEnumerator TriggerVignetteEffect()
     {
-        float initialIntensity = vignette.intensity.value;
-
         // Increase vignette intensity
         vignette.intensity.value = damageVignetteIntensity;
 

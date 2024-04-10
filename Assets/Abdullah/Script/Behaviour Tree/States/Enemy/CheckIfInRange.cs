@@ -8,7 +8,7 @@ public class CheckIfInRange : TreeNode
 {
     [SerializeField] float attackSpeed;
     Transform _transform, player;
-    public float distancefromPLayer = 10.00f;
+    public float distancefromPLayer = 3;
     float chaseTimer;
 
     public CheckIfInRange(Transform transform)
