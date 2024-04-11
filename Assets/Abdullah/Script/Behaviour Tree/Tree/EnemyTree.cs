@@ -19,8 +19,8 @@ public class EnemyTree : TreeRoot
                 {
 
                     // new  myScripts.cs
-                    new EnemyMeleeAttack(),
-                    new EnemyCastAttack(),
+                    new EnemyMeleeAttack(transform),
+                    new EnemyCastAttack(transform),
                     new EnemyRangeAttack(),
                     new CheckIfInRange(transform),
                 }),

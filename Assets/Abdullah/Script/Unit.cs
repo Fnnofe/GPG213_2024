@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Unit : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Unit : MonoBehaviour
         time = time + 1 * Time.deltaTime;
         if (time >= .5f)
         {
-            Debug.Log("time" + time);
+           // Debug.Log("time" + time);
             time = 0;
             targetIndex = 0;
             PathRequestManger.RequestPath(transform.position, target.position, OnPathFound);
@@ -53,8 +54,12 @@ public class Unit : MonoBehaviour
                 }
                 currentWayPoint = path[targetIndex];
             }
-            transform.position = Vector3.MoveTowards(transform.position, currentWayPoint, speed * Time.deltaTime);
+            Vector3 newPosition = new Vector3(currentWayPoint.x, transform.position.y, currentWayPoint.z);
+            Vector3 newRotation = new Vector3(transform.position.x, currentWayPoint.y, transform.position.z);
 
+            transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+            Vector3 lerpUnit= currentWayPoint - newRotation;
+            transform.forward = lerpUnit;
             yield return null;
         }
     }

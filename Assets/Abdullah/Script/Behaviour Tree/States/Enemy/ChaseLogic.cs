@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using BehaviorTree;
+using UnityEngine.UIElements;
 
 public class ChaseLogic : TreeNode
 {
@@ -22,11 +23,12 @@ public class ChaseLogic : TreeNode
     }
     public override NodeState Evaluate()
     {
-        Vector3 direction = player.position - _transform.position;
-        Ray ray = new Ray(_transform.position, direction);
+        Vector3 direction = player.position  - (_transform.position + new Vector3(0, 0.2f, 0));
+        Ray ray = new Ray(_transform.position+ new Vector3(0,0.2f,0), direction);
         RaycastHit hit;
         Physics.Raycast(ray, out hit);
 
+        Debug.Log("hit: "+hit.transform.name);
         if (hit.transform.name == player.transform.name)
         {
             if (direction.magnitude > 1)
@@ -40,7 +42,10 @@ public class ChaseLogic : TreeNode
 
 
             _transform.position += direction *_speed*Time.deltaTime;
+            _transform.rotation = Quaternion.LookRotation(direction); 
+
             _unit.enabled = false;
+
             return NodeState.Sucess;
         }
         else

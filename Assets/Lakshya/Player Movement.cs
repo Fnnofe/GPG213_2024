@@ -21,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private bool canDash = true;
 
+     Animator animator;
     private void Start()
     {
+        animator=GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -32,9 +34,14 @@ public class PlayerMovement : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("PosX", horizontal);
+        animator.SetFloat("PosY", vertical);
+
+
+
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
+         
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
