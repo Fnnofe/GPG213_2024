@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 3870.8765, g: 4819.9634, b: 4428.8013, a: 1}
+  m_IndirectSpecularColor: {r: 3870.7065, g: 4819.7407, b: 4428.6294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6459,11 +6459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3400328191625744850, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017653754
+      value: -0.000000017653761
       objectReference: {fileID: 0}
     - target: {fileID: 3400328191625744850, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000017053201
+      value: 0.0000000017053208
       objectReference: {fileID: 0}
     - target: {fileID: 3777133575052351582, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_Name
@@ -6471,19 +6471,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772132758360292269, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000035307515
+      value: -0.000000035307515
       objectReference: {fileID: 0}
     - target: {fileID: 4772132758360292269, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000034106415
+      value: 0.0000000034106415
       objectReference: {fileID: 0}
     - target: {fileID: 5039487079361285276, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017055264
+      value: 0.00000001705526
       objectReference: {fileID: 0}
     - target: {fileID: 5039487079361285276, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000022754376
+      value: -0.0000000022754372
       objectReference: {fileID: 0}
     - target: {fileID: 6303915006497066740, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_AnchorMax.y
