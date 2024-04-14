@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class meleplayer : MonoBehaviour
 {
-    public GameObject meele;
-    public bool canAttack = true;
     public float attackCooldown = 1f;
-    public bool isAttacking = false;
+
+    bool canAttack = true;
+
+
+    void Start()
+    {
+
+    }
 
     void Update()
     {
@@ -24,9 +29,8 @@ public class meleplayer : MonoBehaviour
     public void MeeleAttack()
     {
         canAttack = false;
-        isAttacking = true;
-        Animator anim = meele.GetComponent<Animator>();
-        anim.SetTrigger("Attack");
+
+        GetComponent<Animator>().SetTrigger("Attack");
         StartCoroutine(ResetCooldown());
     }
 
@@ -35,6 +39,5 @@ public class meleplayer : MonoBehaviour
     {
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
-        isAttacking = false;
     }
 }

@@ -7,7 +7,7 @@ using BehaviorTree;
 public class CheckIfFar : TreeNode
 {
     public float despawnDistance=55f;
-    public float distancefromPLayer=8.00f;
+    public float distancefromPLayer=2.50f;
     Transform _transform;
     Transform player;
     public CheckIfFar(Transform transform)

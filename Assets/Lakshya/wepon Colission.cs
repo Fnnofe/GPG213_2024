@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class weponColission : MonoBehaviour
 {
-    public meleplayer mp;
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Enemy")
         {
             Debug.Log(other.name);
-            other.GetComponent<Animator>().SetTrigger("Hit");
-            GameObject.Destroy(other.gameObject);
+            other.GetComponent<EnemyHealth>().TakeDamage(10);
 
         }
     }
+
+
+
 
 
 }
