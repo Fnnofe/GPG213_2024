@@ -643,7 +643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62947672}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08318161, y: 0.000000004286687, z: 3.5781356e-10, w: 0.9965344}
+  m_LocalRotation: {x: -0.08318161, y: -0.000000004286688, z: -3.5781364e-10, w: 0.9965344}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1223,9 +1223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693959a80e449df4584df7595ca22981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 10
-  healthBar: {fileID: 1899202026}
+  currentHealth: {fileID: 0}
+  maxHealth: {fileID: 0}
+  healthSlider: {fileID: 0}
+  easInHealthSlider: {fileID: 0}
   postProcessingVolume: {fileID: 0}
   damageVignetteIntensity: 0.5
   vignetteFadeDuration: 1
@@ -2691,10 +2692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243a23d6ca4d5984dbd9989ee05b4028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meele: {fileID: 934707450}
-  canAttack: 1
   attackCooldown: 1
-  isAttacking: 0
 --- !u!1 &482978746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4404,7 +4402,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -204.2, y: 75.257996, z: 111.45996}
-  m_LocalScale: {x: 23.024675, y: 21.657837, z: 16.648548}
+  m_LocalScale: {x: 23.024675, y: 21.657837, z: 18.291761}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2065876615}
@@ -5271,7 +5269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067442472}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08318163, y: 0.000000008573376, z: 7.1562734e-10, w: 0.99653447}
+  m_LocalRotation: {x: -0.08318163, y: -0.000000008573376, z: -7.1562734e-10, w: 0.99653447}
   m_LocalPosition: {x: 1.88, y: 1.84, z: -14.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8088,8 +8086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d552fe3e821fcd41a872bbe07a6d20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
   maxHealth: 10
+  healthSlider: {fileID: 0}
+  easyHealthSlider: {fileID: 0}
 --- !u!54 &1559165350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10487,13 +10486,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135090672}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6049762, z: -0, w: 0.7962436}
+  m_LocalRotation: {x: -0, y: 0.6170265, z: -0, w: 0.7869424}
   m_LocalPosition: {x: -58.88, y: 41.7, z: 117.44}
   m_LocalScale: {x: 28.329096, y: 1, z: 19.843428}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2065876615}
-  m_LocalEulerAnglesHint: {x: 0, y: 74.454, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 76.199, z: 0}
 --- !u!65 &2135090674
 BoxCollider:
   m_ObjectHideFlags: 0
