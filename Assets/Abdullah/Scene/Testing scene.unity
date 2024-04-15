@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 3870.7065, g: 4819.7407, b: 4428.6294, a: 1}
+  m_IndirectSpecularColor: {r: 3582.854, g: 4115.3423, b: 3148.729, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6459,11 +6459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3400328191625744850, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017653761
+      value: 0.000000017653754
       objectReference: {fileID: 0}
     - target: {fileID: 3400328191625744850, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000017053208
+      value: -0.0000000017053201
       objectReference: {fileID: 0}
     - target: {fileID: 3777133575052351582, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_Name
@@ -6471,11 +6471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772132758360292269, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000035307515
+      value: 0.000000035307515
       objectReference: {fileID: 0}
     - target: {fileID: 4772132758360292269, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000034106415
+      value: -0.0000000034106415
       objectReference: {fileID: 0}
     - target: {fileID: 5039487079361285276, guid: a4785c472cf2b04438e86cfe67322dee, type: 3}
       propertyPath: m_LocalRotation.y
@@ -12690,6 +12690,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3773666450310581468, guid: 8d45661c97de41149a3b01be75aef2ef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773666450310581468, guid: 8d45661c97de41149a3b01be75aef2ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.11
+      objectReference: {fileID: 0}
     - target: {fileID: 4301046526446238996, guid: 8d45661c97de41149a3b01be75aef2ef, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12757,6 +12765,10 @@ PrefabInstance:
     - target: {fileID: 7094455278916122382, guid: 8d45661c97de41149a3b01be75aef2ef, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203026322244382621, guid: 8d45661c97de41149a3b01be75aef2ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
