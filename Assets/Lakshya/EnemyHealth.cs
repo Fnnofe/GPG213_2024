@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
@@ -11,9 +12,10 @@ public class EnemyHealth : MonoBehaviour
     public Slider easyHealthSlider;
 
     float percentage;
-
+    Camera cam;
     void Start()
     {
+        cam = Camera.main;
         percentage =0.02f * maxHealth;
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
@@ -22,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        transform.LookAt(cam.transform); 
         easyHealthSlider.value = Mathf.Lerp(easyHealthSlider.value, currentHealth, 0.05f);
         if (easyHealthSlider.value <= percentage) Die();
     }

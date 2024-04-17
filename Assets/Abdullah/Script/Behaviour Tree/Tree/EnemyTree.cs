@@ -33,7 +33,6 @@ public class EnemyTree : TreeRoot
 
 
             }),
-            new DespawnEnemy(),
 
         });
 
