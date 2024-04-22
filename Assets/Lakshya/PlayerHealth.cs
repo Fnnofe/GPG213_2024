@@ -16,7 +16,6 @@ public class PlayerHealth : MonoBehaviour
 
     float percentage;
 
-    // Reference to the post-processing volume in your scene
     public Volume postProcessingVolume;
     Vignette vignette;
 
@@ -33,7 +32,6 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.maxValue = maxHealth.value;
         UpdateUI();
 
-        // Initialize vignette effect
         if (postProcessingVolume.profile.TryGet(out Vignette tempVignette))
         {
             vignette = tempVignette;
@@ -55,7 +53,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        // Trigger vignette effect
         StartCoroutine(TriggerVignetteEffect());
 
         currentHealth.value -= damage;
@@ -76,13 +73,13 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator TriggerVignetteEffect()
     {
-        // Increase vignette intensity
+       
         vignette.intensity.value = damageVignetteIntensity;
 
-        // Wait for a brief period
+       
         yield return new WaitForSeconds(vignetteFadeDuration);
 
-        // Fade back to normal vignette intensity
+        
         float elapsedTime = 0f;
         while (elapsedTime < vignetteFadeDuration)
         {
@@ -91,7 +88,6 @@ public class PlayerHealth : MonoBehaviour
             yield return null;
         }
 
-        // Ensure vignette intensity is back to normal
         vignette.intensity.value = initialIntensity;
     }
 }
