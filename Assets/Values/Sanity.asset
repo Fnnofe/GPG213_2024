@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4dde5c9547fca4da9e4c3403bffae5, type: 3}
   m_Name: Sanity
   m_EditorClassIdentifier: 
-  value: 0
+  value: 15.717019

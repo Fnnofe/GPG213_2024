@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
     private void FixedUpdate()
     {
         transform.LookAt(cam.transform); 
-        easyHealthSlider.value = Mathf.Lerp(easyHealthSlider.value, currentHealth, 0.05f);
+        easyHealthSlider.value = Mathf.Lerp(easyHealthSlider.value, currentHealth, 0.1f);
         if (easyHealthSlider.value <= percentage) Die();
     }
 

@@ -109,17 +109,6 @@ public class Ability_Schizo : MonoBehaviour
             sanityValue.value = timer;
 
         }
-        /* // Deactivate ability
-        if (timer > 0 && propsShift.activeSelf == false)
-        {
-            timer -= 1 * Time.deltaTime;
-            if (timer < 0)
-            {
-                timer = 0;
-            }
-            slider.value = timer / MaxDuration;
-        }
-        */
 
         animator.SetFloat("Timer", timer / MaxDuration);
     }
