@@ -83,7 +83,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MovingTexture:
-        m_Texture: {fileID: 2800000, guid: 8600cbcdde761e14e87e6f46fa33b67a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6be2432bef45a1b408f4b7e080cd0086, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:

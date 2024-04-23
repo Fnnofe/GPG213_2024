@@ -36,6 +36,8 @@ public class GridMap : MonoBehaviour
             {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiaemeter + nodeRadius) + Vector3.forward * (y * nodeDiaemeter + nodeRadius);
                 bool wakable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
+                //bool wakable = !(Physics.CheckBox(worldPoint, new Vector3(gridWorldSize.x, 20, gridWorldSize.y), Quaternion.identity,unwalkableMask));
+
                 grid[x, y] = new Node(wakable, worldPoint, x, y);
 
             }

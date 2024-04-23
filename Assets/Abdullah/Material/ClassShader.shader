@@ -16,7 +16,7 @@ Shader "Unlit/ClassShader"
     }
     SubShader
     {
-		Tags{ "RenderType" = "Transparent"  "Queue" = "Transparent+0" "IgnoreProjector" = "True" "IsEmissive" = "true"  }
+		Tags{ "RenderType" = "Transparent"  "Queue" = "Transparent+0" "IgnoreProjector" = "True"}
 	Blend SrcAlpha OneMinusSrcAlpha
          
         Pass

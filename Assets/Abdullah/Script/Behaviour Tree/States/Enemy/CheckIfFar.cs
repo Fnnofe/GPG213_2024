@@ -35,7 +35,7 @@ public class CheckIfFar : TreeNode
             //TooFar 
             //despawn
             Debug.Log("DespawnEnemy");
-            player.gameObject.SetActive(false);
+            _transform.gameObject.SetActive(false);
             return NodeState.Failure;
 
         }
