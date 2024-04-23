@@ -19,7 +19,7 @@ public class Ability_Schizo : MonoBehaviour
     float timer;
     float enemyTimer;
     public Volume postProcessingVolume;
-    Vignette vignette;
+   // Vignette vignette;
     public FloatValue sanityValue;
 
     void Start()
@@ -28,6 +28,8 @@ public class Ability_Schizo : MonoBehaviour
         timer = 0f;
         enemyTimer = 0f;
 
+
+        /*
         // Initialize vignette effect
         postProcessingVolume = FindObjectOfType<Volume>();
         if (postProcessingVolume.profile.TryGet(out Vignette tempVignette))
@@ -35,7 +37,9 @@ public class Ability_Schizo : MonoBehaviour
             vignette = tempVignette;
         }
         slider.value = sanityValue.value / MaxDuration;
+        */
     }
+    
     public float EnemyTimer
     {
         set
