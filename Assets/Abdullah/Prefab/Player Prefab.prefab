@@ -484,7 +484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730663748745006972}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09615062, y: -0.000000035307515, z: 0.0000000034106415, w: 0.9953669}
+  m_LocalRotation: {x: 0.09615062, y: 0.000000035307515, z: -0.0000000034106415, w: 0.9953669}
   m_LocalPosition: {x: 0, y: 3.9900007, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1106,8 +1106,8 @@ CharacterController:
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 60
+  m_StepOffset: 1.2
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.27, z: 0}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950956c121128944abca7a78e0fa3150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeColider: {fileID: 4636530385218786316}
+  meleeColider: {fileID: 8334881067550451961}
 --- !u!1 &1666092147861289930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2533677732444914210}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13224378, y: -0.000000017055264, z: 0.0000000022754376, w: 0.99121726}
+  m_LocalRotation: {x: 0.13224378, y: 0.00000001705526, z: -0.0000000022754372, w: 0.99121726}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2703,9 +2703,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4962275474556215190}
+  - component: {fileID: 8334881067550451961}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2727,6 +2728,27 @@ Transform:
   - {fileID: 4644863505174148152}
   m_Father: {fileID: 1840569590905066196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8334881067550451961
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3932257298444532613}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1.98, y: 1.3, z: 1.49}
+  m_Center: {x: 0, y: 1.17, z: 1.19}
 --- !u!1 &4187583581271686690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,10 +4756,11 @@ MonoBehaviour:
   player: {fileID: 3932257298444532613}
   slider: {fileID: 5523873747727331644}
   myKey: 304
-  MaxDuration: 20
+  MaxDuration: 30
   spawnEnemyInterval: 2
   vignetteIntensityMultiplier: 0.5
   postProcessingVolume: {fileID: 4684317615403628715}
+  sanityValue: {fileID: 11400000, guid: 042d4fc3f45da374b9d7951928262c40, type: 2}
 --- !u!1 &6669023925951511334
 GameObject:
   m_ObjectHideFlags: 0

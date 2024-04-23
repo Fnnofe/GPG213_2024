@@ -20,6 +20,7 @@ public class Ability_Schizo : MonoBehaviour
     float enemyTimer;
     public Volume postProcessingVolume;
     Vignette vignette;
+    public FloatValue sanityValue;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class Ability_Schizo : MonoBehaviour
         {
             vignette = tempVignette;
         }
+        slider.value = sanityValue.value / MaxDuration;
     }
     public float EnemyTimer
     {
@@ -44,6 +46,7 @@ public class Ability_Schizo : MonoBehaviour
     }
     void Update()
     {
+        
         if (Input.GetKeyDown(myKey))
         {
             animator.SetTrigger("Switch");
@@ -92,6 +95,8 @@ public class Ability_Schizo : MonoBehaviour
 
     private void AbilityTimer()
     {
+         timer = sanityValue.value;
+
         // Activate the ability
         if (timer <= MaxDuration && propsShift.activeSelf == true)
         {
@@ -101,6 +106,8 @@ public class Ability_Schizo : MonoBehaviour
                 timer = MaxDuration;
             }
             slider.value = timer / MaxDuration;
+            sanityValue.value = timer;
+
         }
         /* // Deactivate ability
         if (timer > 0 && propsShift.activeSelf == false)
