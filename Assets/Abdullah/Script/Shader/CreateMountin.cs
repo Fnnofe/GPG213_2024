@@ -11,7 +11,6 @@ public class CreateMountin : MonoBehaviour
     //https://catlikecoding.com/unity/tutorials/procedural-grid/
     MeshRenderer meshRender;
     MeshFilter meshFilter;
-    public GameObject cube;
     [SerializeField] Material material;
     public Vector2Int gridSize;
     Vector3[] myVerices;
@@ -21,7 +20,8 @@ public class CreateMountin : MonoBehaviour
     Vector3[] originalVerts;
     public Texture2D displacmentTexture;
     public float displacementStrength;
-    public bool updateVerts = true;
+    public bool updateVerts = false;
+    public float mountainScale=3;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class CreateMountin : MonoBehaviour
         meshFilter = gameObject.AddComponent<MeshFilter>();
         myVerices = new Vector3[(gridSize.x + 1) * (gridSize.y + 1)];
         meshUVs = new Vector2[myVerices.Length];
-
+        
         GenerateMesh();
 
 
@@ -42,6 +42,7 @@ public class CreateMountin : MonoBehaviour
         UpdateDisplacement();
         meshFilter.mesh.vertices = displacementVerts;
         meshFilter.mesh.RecalculateNormals();
+        transform.localScale = Vector3.one* mountainScale; 
 
     }
 
