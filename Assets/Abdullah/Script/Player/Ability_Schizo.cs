@@ -42,15 +42,17 @@ public class Ability_Schizo : MonoBehaviour
     
     public float EnemyTimer
     {
+        get { return enemyTimer; }
         set
         {
             timer = value;
             enemyTimer = value;
         }
+        
     }
     void Update()
     {
-        
+        slider.value = timer / MaxDuration;
         if (Input.GetKeyDown(myKey))
         {
             animator.SetTrigger("Switch");

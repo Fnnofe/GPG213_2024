@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
             // player died
             // player died
         }
+        UpdateUI();
 
     }
 
@@ -57,8 +58,6 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth.value -= damage;
         GetComponent<Animator>().SetTrigger("Hit");
-        UpdateUI();
-
     }
     void UpdateUI()
     {
