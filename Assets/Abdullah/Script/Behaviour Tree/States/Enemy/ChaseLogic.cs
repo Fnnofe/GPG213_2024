@@ -47,7 +47,9 @@ public class ChaseLogic : TreeNode
 
 
             _transform.position += direction *_speed*Time.deltaTime;
-            _transform.rotation = Quaternion.LookRotation(direction); 
+            _transform.rotation = Quaternion.LookRotation(direction);
+            Vector3 currentAngle = _transform.rotation.eulerAngles;
+            _transform.rotation = Quaternion.Euler(0f, currentAngle.y, currentAngle.z);
 
             _unit.enabled = false;
 

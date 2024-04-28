@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using UnityEditor.Purchasing;
 using UnityEngine;
 
 public class BoidsManager : MonoBehaviour

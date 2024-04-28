@@ -6,16 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Jamal Scenes/Jamal - Tutorial.unity
-    guid: 4306e42887a67af4598ffc8d9b867b89
-  - enabled: 1
-    path: Assets/Scenes/Lakshya Scenes/greybox new level.unity
-    guid: 14cb0d7209bd97b429bf7caffd95879c
-  - enabled: 1
     path: Assets/Scenes/Lakshya Scenes/HubScene.unity
     guid: fa4741c5eae25684098e8e4193383e59
   - enabled: 1
+    path: Assets/Scenes/Jamal Scenes/Jamal - Tutorial.unity
+    guid: 4306e42887a67af4598ffc8d9b867b89
+  - enabled: 1
     path: Assets/Scenes/Jamal Scenes/Jamal - Level.unity
     guid: 2e7f54e79e34b9b439b498f1df7110e2
+  - enabled: 1
+    path: Assets/Scenes/Lakshya Scenes/new level.unity
+    guid: 20045234433c53947b4f744e9f504052
+  - enabled: 1
+    path: Assets/Scenes/Lakshya Scenes/BossArena.unity
+    guid: cf6e5f52334e1ea48a279fea0c8cbe92
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3d6f00680811c30488e0103a144914ce, type: 2}
