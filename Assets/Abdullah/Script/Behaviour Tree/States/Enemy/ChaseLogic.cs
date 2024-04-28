@@ -12,14 +12,18 @@ public class ChaseLogic : TreeNode
     private Transform player;
     private Animation _animation;
     private Unit _unit;
+    private Entity _entity;
     private float _speed;
+    float timer;
     public ChaseLogic(Transform transform)
     {
         _transform = transform;
         _animation = transform.GetComponent<Animation>();
         _unit = transform.GetComponent<Unit>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        _speed= _unit.speed;
+        _entity = _transform.GetComponent<Entity>();
+        _speed = _unit.speed;
+        timer = 2;
     }
     public override NodeState Evaluate()
     {
@@ -27,6 +31,7 @@ public class ChaseLogic : TreeNode
         Ray ray = new Ray(_transform.position+ new Vector3(0,0.2f,0), direction);
         RaycastHit hit;
         Physics.Raycast(ray, out hit);
+        timer-=1 * Time.deltaTime;
 
         Debug.Log("hit: "+hit.transform.name);
         if (hit.transform.name == player.transform.name)
@@ -50,6 +55,7 @@ public class ChaseLogic : TreeNode
         }
         else
         {
+  //          if (timer<=0 ) _entity.enabled = false;
             _unit.enabled = true;
             Debug.Log("Player is Hidding");
             _unit.FindPath();
