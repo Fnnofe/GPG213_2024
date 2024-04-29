@@ -24,7 +24,6 @@ public class CheckIfFar : TreeNode
         {
 
             //Chase
-            Debug.Log("not too far");
 
             return NodeState.Sucess;
 
@@ -34,13 +33,11 @@ public class CheckIfFar : TreeNode
 
             //TooFar 
             //despawn
-            Debug.Log("DespawnEnemy");
             _transform.gameObject.SetActive(false);
             return NodeState.Failure;
 
         }
 
-        Debug.Log("too close");
 
         return NodeState.Failure;
 

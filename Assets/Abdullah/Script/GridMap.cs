@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class GridMap : MonoBehaviour
@@ -35,8 +36,9 @@ public class GridMap : MonoBehaviour
             for (int y = 0; y < gridSizeY; y++)
             {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiaemeter + nodeRadius) + Vector3.forward * (y * nodeDiaemeter + nodeRadius);
-                bool wakable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
-                //bool wakable = !(Physics.CheckBox(worldPoint, new Vector3(gridWorldSize.x, 20, gridWorldSize.y), Quaternion.identity,unwalkableMask));
+                // bool wakable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
+                Vector3 cubeSize = Vector3.one * (nodeRadius - .2f);
+                  bool wakable = !(Physics.CheckBox(worldPoint, new Vector3(cubeSize.x,20, cubeSize.z) , Quaternion.identity, unwalkableMask));
 
                 grid[x, y] = new Node(wakable, worldPoint, x, y);
 
@@ -91,13 +93,12 @@ public class GridMap : MonoBehaviour
     }
 
 
-
+    /*
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 0.1f, gridWorldSize.y));
+        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 0.2f, gridWorldSize.y));
 
-
-
+        Vector3 cubeSize = Vector3.one * (nodeDiaemeter - .2f);
         if (grid != null && displayGrid == true)
         {
             foreach (Node node in grid)
@@ -105,11 +106,12 @@ public class GridMap : MonoBehaviour
 
 
                 Gizmos.color = Color.white;
-                Gizmos.DrawCube(node.worldPos, Vector3.one * (nodeDiaemeter - .1f));
+                Gizmos.DrawCube(node.worldPos, cubeSize);
                 if (node.walkable == false)
                 {
                     Gizmos.color = Color.red;
-                    Gizmos.DrawCube(node.worldPos, Vector3.one * (nodeDiaemeter - .1f));
+                    
+                    Gizmos.DrawCube(node.worldPos, cubeSize);
 
 
                 }
@@ -117,4 +119,5 @@ public class GridMap : MonoBehaviour
             }
         }
     }
+    */
 }

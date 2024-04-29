@@ -21,7 +21,6 @@ using BehaviorTree;
     {
         _animator.SetTrigger("Attack");
 
-        Debug.Log("I'm in EnemyMeleeAttack");
 
         return NodeState.Running;
 

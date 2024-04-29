@@ -64,6 +64,7 @@ public class Unit : MonoBehaviour
         }
     }
 
+    /*
     public void OnDrawGizmos()
     {
         if (path != null)
@@ -86,4 +87,6 @@ public class Unit : MonoBehaviour
         }
 
     }
+    */
+
 }

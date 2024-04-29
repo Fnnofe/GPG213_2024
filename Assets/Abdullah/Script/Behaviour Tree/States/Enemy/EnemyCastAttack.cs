@@ -22,7 +22,6 @@ public class EnemyCastAttack : TreeNode
     {
        // _animator.SetTrigger("Attack");
 
-        Debug.Log("I'm in EnemyCastAttack");
 
         return NodeState.Running;
 

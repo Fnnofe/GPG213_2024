@@ -6,17 +6,17 @@ public class Entity : MonoBehaviour
 
     private void OnEnable()
     {
-    //    if (BoidsManager.Instance.entities.Count<6)BoidsManager.Instance.entities.Add(this);
+       BoidsManager.Instance.entities.Add(this);
 
     }
     private void OnDisable()
     {
 
-        //    BoidsManager.Instance.entities.Remove(this);
+            BoidsManager.Instance.entities.Remove(this);
     }
     private void OnDestroy()
     {
-       // BoidsManager.Instance.entities.Remove(this);
+        BoidsManager.Instance.entities.Remove(this);
     }
 
     Collider _entityDetectionRange;
@@ -30,7 +30,7 @@ public class Entity : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
-        transform.position= Vector3.MoveTowards(transform.position, direction, Time.deltaTime * 0.4f);
+        transform.position= transform.position-direction * Time.deltaTime;
 
     }
 

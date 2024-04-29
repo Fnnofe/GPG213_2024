@@ -15,7 +15,6 @@ public class RecieveDamage : MonoBehaviour
             if (other.gameObject.tag == "PlayerAttack")
             {
                 GetComponent<EnemyHealth>().TakeDamage(meleeDamage);
-                Debug.Log("Enemy took damage");
 
             }
         }
@@ -24,7 +23,6 @@ public class RecieveDamage : MonoBehaviour
             if (other.gameObject.tag == "Weapon") 
             {
             GetComponent<PlayerHealth>().TakeDamage(meleeDamage);
-            Debug.Log("Player took damage");
             }
         }
 

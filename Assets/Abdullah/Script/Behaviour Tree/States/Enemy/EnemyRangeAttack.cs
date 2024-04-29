@@ -12,7 +12,6 @@ public class EnemyRangeAttack : TreeNode
 
     public override NodeState Evaluate()
     {
-        Debug.Log("I'm in EnemyRangeAttack");
 
 
 

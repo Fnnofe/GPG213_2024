@@ -12,33 +12,17 @@ public class BoidsManager : MonoBehaviour
             Instance = this;
         }
     }
-    public float chaseWeight;
-    public float cohesionWeight;
-    public float seperationWeight;
-    public float alignmentWeight;
     public Transform followTarget;
     [Range(1f, 10f)]
     public float weightsMultipler = 5f;
     [Range(1f, 10f)]
     public float sensorRadius = 1.5f;
     [Range(0f, 3f)]
-    public float avoidanceRadiusMultiplier = 0.5f;
     public List<Entity> entities = new List<Entity>();
-    float squaresensorRadius;
-    float squareAvoidanceRadius;
-    public float SquareAvoidanceRadius
-    {
-        get
-        {
-            return squareAvoidanceRadius;
-        }
-    }
     private void Start()
     {
         if (followTarget==null) followTarget = GameObject.FindGameObjectWithTag("Player").transform;
 
-        squaresensorRadius = sensorRadius * sensorRadius;
-        squareAvoidanceRadius = squaresensorRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
     }
     private void Update()
     {

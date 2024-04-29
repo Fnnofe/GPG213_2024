@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class BoidsBehaviour : MonoBehaviour
 {
@@ -9,7 +8,11 @@ public class BoidsBehaviour : MonoBehaviour
     Vector3 seperationMove;
     Vector3 alignmentMove;
     Vector3 followPlayer;
-
+    Vector3 move;
+    public float chaseWeight;
+    public float cohesionWeight;
+    public float seperationWeight;
+    public float alignmentWeight;
     public void Awake()
     {
         
@@ -22,55 +25,31 @@ public class BoidsBehaviour : MonoBehaviour
         Cohesion(entity, otherEntites, manager, target);
         FollowPlayer(entity, otherEntites, manager, target);
 
-        // FollowPlayer(entity, otherEntites, manager, target);
-        Vector3 move = cohesionMove * BoidsManager.Instance.cohesionWeight + seperationMove * BoidsManager.Instance.seperationWeight+ alignmentMove * BoidsManager.Instance.alignmentWeight + followPlayer * BoidsManager.Instance.chaseWeight;
+        move = cohesionMove * cohesionWeight + seperationMove * seperationWeight + alignmentMove * alignmentWeight + followPlayer * chaseWeight;
         Debug.Log("moveBOIDS" + move);
 
         return move;
     }
-
-
     public Vector3 Cohesion(Entity entity,List<Transform>otherEntites ,BoidsManager manager, Transform target)
     {
         cohesionMove = Vector3.zero;
-        //case nothing around us
         if (otherEntites.Count == 0) return Vector3.zero;
-        //case other Entity are around us
         foreach (Transform detectedEntity in otherEntites) cohesionMove += detectedEntity.position;
-        //average all the position
         cohesionMove /= otherEntites.Count;
-
-        // direction of movement from the indivsual boid
-        cohesionMove -= entity.transform.position;
-
+        cohesionMove = entity.transform.position - cohesionMove;
         cohesionMove.y = 0;
-        Debug.Log("cohesionMove" + otherEntites.Count);
-        Debug.Log("otherEntites.Count" + otherEntites.Count);
-
         return cohesionMove;
-
     }
     public Vector3 Seperate(Entity entity, List<Transform> otherEntites, BoidsManager manager, Transform target)
     {
         int avoidOthers = 0;
         if (otherEntites.Count == 0) return Vector3.forward;
          seperationMove = Vector3.zero;
-        foreach (Transform detectedEntity in otherEntites)
-        {
-            if (Vector3.SqrMagnitude(detectedEntity.position - entity.transform.position) < manager.SquareAvoidanceRadius)
-            {
-                avoidOthers++;
-                seperationMove += (entity.transform.position - detectedEntity.position);
-
-            }
-
-        }
-
         if (avoidOthers > 0) seperationMove /= avoidOthers;
+        foreach (Transform detectedEntity in otherEntites) seperationMove += detectedEntity.position;
+        seperationMove /= otherEntites.Count;
+        seperationMove -= entity.transform.position;
         seperationMove.y = 0;
-        Debug.Log("seperationMove" + seperationMove);
-                Debug.Log("otherEntites.Count" + otherEntites.Count);
-
         return seperationMove;
 
 
@@ -87,12 +66,11 @@ public class BoidsBehaviour : MonoBehaviour
         alignmentMove /= otherEntites.Count;
         alignmentMove.y = 0;
         Debug.Log("alignmentMove" + alignmentMove);
-
         return alignmentMove;
     }
     public  Vector3 FollowPlayer(Entity entity, List<Transform> otherEntites, BoidsManager manager, Transform target)
     {
-        followPlayer = target.position - entity.transform.position;
+        followPlayer =  entity.transform.position- target.position;
         followPlayer.y = 0f;
         followPlayer.Normalize();
         return followPlayer;

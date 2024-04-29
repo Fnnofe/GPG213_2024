@@ -23,7 +23,7 @@ public class ChaseLogic : TreeNode
         player = GameObject.FindGameObjectWithTag("Player").transform;
         _entity = _transform.GetComponent<Entity>();
         _speed = _unit.speed;
-        timer = 2;
+        timer = 3;
     }
     public override NodeState Evaluate()
     {
@@ -33,7 +33,6 @@ public class ChaseLogic : TreeNode
         Physics.Raycast(ray, out hit);
         timer-=1 * Time.deltaTime;
 
-        Debug.Log("hit: "+hit.transform.name);
         if (hit.transform.name == player.transform.name)
         {
             if (direction.magnitude > 1)
@@ -41,25 +40,21 @@ public class ChaseLogic : TreeNode
 
                 direction.Normalize();
             }
+            _entity.enabled = true;
+            timer = 3;
             _unit.StopCoroutine("FollowPath");
 
-            _transform.position = Vector3.MoveTowards(_transform.position, player.position, _speed * Time.deltaTime);
-
-
-            _transform.position += direction *_speed*Time.deltaTime;
             _transform.rotation = Quaternion.LookRotation(direction);
             Vector3 currentAngle = _transform.rotation.eulerAngles;
             _transform.rotation = Quaternion.Euler(0f, currentAngle.y, currentAngle.z);
-
             _unit.enabled = false;
 
             return NodeState.Sucess;
         }
         else
         {
-  //          if (timer<=0 ) _entity.enabled = false;
+           if (timer<=0 ) _entity.enabled = false;
             _unit.enabled = true;
-            Debug.Log("Player is Hidding");
             _unit.FindPath();
             return NodeState.Sucess;
         }
